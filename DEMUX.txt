@@ -1,0 +1,20 @@
+DEMUX
+Inputs: in, sel;
+Outputs: out1, out2;
+
+
+Parts: 
+not1 NOT,
+not2 NOT,
+and1 AND,
+and2 AND;
+
+Wires: 
+sel -> not1.in,
+not1.out -> and2.in1,
+not1.out -> not2.in,
+not2.out -> and1.in1,
+in -> and2.in2,
+in -> and1.in2,
+and1.out -> out2,
+and2.out -> out1;

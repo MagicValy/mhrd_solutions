@@ -1,0 +1,19 @@
+OR4W
+Inputs: in[4];
+Outputs: out;
+
+
+Parts: 
+myOr1 OR,
+myOr2 OR,
+myOr3 OR; 
+
+
+Wires: 
+in[1] -> myOr1.in1,
+in[2] -> myOr1.in2,
+in[3] -> myOr2.in1,
+in[4] -> myOr2.in2,
+myOr1.out -> myOr3.in1,
+myOr2.out -> myOr3.in2,
+myOr3.out -> out;

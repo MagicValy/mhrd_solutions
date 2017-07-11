@@ -1,0 +1,16 @@
+REGISTER
+Inputs: in, load;
+Outputs: out;
+
+
+Parts: 
+  mux MUX,
+  dff DFF;
+
+
+Wires: 
+  load -> mux.sel,
+  in -> mux.in2,
+  mux.out -> dff.in,
+  dff.out -> out,
+  dff.out -> mux.in1;

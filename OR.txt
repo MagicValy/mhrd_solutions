@@ -1,0 +1,16 @@
+OR
+Inputs: in1, in2;
+Outputs: out;
+
+
+Parts: 
+myNand NAND,
+myNot1 NOT,
+myNot2 NOT;
+
+Wires: 
+in1 -> myNot1.in,
+myNot1.out -> myNand.in1,
+in2 -> myNot2.in,
+myNot2.out -> myNand.in2,
+myNand.out -> out;
